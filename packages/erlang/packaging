@@ -2,11 +2,12 @@ set -e
 
 export HOME=${BOSH_INSTALL_DIR}
 
+CPUS=$(grep -c ^processor /proc/cpuinfo)
 VERSION="18.1"
 
 tar xzf erlang/otp_src_${VERSION}.tar.gz
 cd otp_src_${VERSION}
 ./configure --prefix=${BOSH_INSTALL_TARGET}
-make
+make -j${CPUS}
 make install
 
