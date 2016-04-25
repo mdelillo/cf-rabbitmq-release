@@ -5,8 +5,8 @@ packages:
 - java
 - rabbitmq-broker
 - util-linux
-- golang
-- route-registrar
+- cf-rabbitmq-golang
+- cf-rabbitmq-route-registrar
 
 properties:
   rabbitmq-broker.route:
