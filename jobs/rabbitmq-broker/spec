@@ -5,8 +5,8 @@ packages:
 - java
 - rabbitmq-common
 - rabbitmq-broker
-- route-registrar
-- syslog_aggregator
+- cf-rabbitmq-route-registrar
+- cf-rabbitmq-syslog_aggregator
 
 properties:
   rabbitmq-broker.registration_interval:

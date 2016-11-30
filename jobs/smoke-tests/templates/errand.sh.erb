@@ -2,8 +2,10 @@
 
 set -e
 
-export GOPATH=/var/vcap/packages/cf-rabbitmq-smoke-tests
-export GOROOT=/var/vcap/packages/golang
+cd /var/vcap/packages/cf-rabbitmq-smoke-tests/src
+
+export GOPATH=$PWD/Godeps/_workspace
+export GOROOT=/var/vcap/packages/cf-rabbitmq-golang
 export PATH=/var/vcap/packages/cf-cli/bin:$GOPATH/bin:$GOROOT/bin:$PATH
 
 export REPO_NAME=github.com/pivotal-cf/cf-rabbitmq-smoke-tests
